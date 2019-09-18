@@ -1,0 +1,54 @@
+<ion-content >
+    <ion-grid no-padding>
+        <ion-row class="page-title-bg" text-left>
+            <ion-col>
+                <h3 class="font2 page-title">Reports List</h3>
+                <span class="btn-back" (click)="closeModal()"><img src="/assets/img/back.png" class="img-back"></span>
+            </ion-col>
+        </ion-row>
+        
+        <ion-row class="mt-60">
+            <ion-col>
+                <ion-card class="cart-bg mb-0">
+                    <ion-card-content class="card_design">
+                        <ion-label>{{reportsTitle}}</ion-label>
+                        <br>
+                        <span class="card_label_date">{{_startDate}}-{{_endDate}}</span>
+                    </ion-card-content>
+                </ion-card>  
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                    
+                <ul>
+                    <li  *ngFor="let item of reports; let i = index" >
+                        <input type="checkbox" [checked]='i==0?false:true'>
+                        <i></i>
+                        <label class="date">{{item.date}}</label>
+                        <div class="datatable">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Option</th>
+                                        <th>Actual</th>
+                                        <th>Standard</th>
+                                        <th>Planned</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let res of item.list">
+                                        <td>{{res.option}}</td>
+                                        <td>{{res.actual}}</td>
+                                        <td>{{res.standard}}</td>
+                                        <td>{{res.variance}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
