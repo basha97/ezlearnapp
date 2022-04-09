@@ -33,7 +33,7 @@
     "ionic-angular": "^3.9.4",
     "ionic-tags-input": "^0.1.2",
     "ionic-text-avatar": "^1.1.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "ngx-tags-input": "^1.1.1",
     "rxjs": "~6.3.3",
     "rxjs-compat": "^6.4.0",
